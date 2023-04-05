@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS9 in Class</title>
+
+	<style>
+	h1{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; size: 25px; font-weight: bold; color: blue;text-align: center;}
+	p{font-family: Arial, Helvetica, sans-serif;} 
+	input#button2{padding: 5px; background-color: red;}
+	input#button1{padding: 5px; background-color: green;}
+	input#button1:hover{background-color: darkgreen; color: white;}
+	input#button2:hover{background-color: maroon; color: white;}
+	textarea#cmt{background-color: silver;}
+	form{background-color: silver; font-family: Arial, Helvetica, sans-serif; color: navy;
+		padding-left: 7%; padding-top: 3%; padding-bottom: 3%; font-size: 80%; margin-left: auto; margin-right: auto; width: 60%;}
+	textarea{background-color: white;}
+	</style>
+
+  </head>
+
+  <body>
+	<h1>HTML FORM</h1>
+
+<form action="" method="post">
+
+	<p>
+		First Name: <input type="text" name="frame" size="20" maxlength="25" placeholder="">
+		Last name: <input type="text" name="frame" size="20" maxlength="25" placeholder="">
+	</p>
+
+	<p>
+		Age: <input type="text" name="frame" size="2" maxlength="2" placeholder="">
+	</p>
+
+	<p>
+		Where are you from? <select name="state">
+			<option value="NULL">Please select a State</option>
+			<option value="MA">Massachussets</option>
+			<option value="FL">Florida</option>
+			<option value="TX">Texas</option>
+			<option value="CA">California</option>
+			<option value="NY">New York</option>
+			<option value="RI">Rhode Island</option>
+		</select>
+	</p>
+
+	<p>
+		Please specify your sex:
+		Male <input type="radio" value="Male" name="sex" id="radio">
+		Female <input type="radio" value="Female" name="sex" id="radio">
+	</p>
+
+	<p>
+		Select your favorite topic in Webtech <br>
+		<input type="checkbox" value="HTML" name="topic"/>HTML<br>
+		<input type="checkbox" value="CSS" name="topic">CSS<br>
+		<input type="checkbox" value="JavaScript" name="topic">JavaScript<br>
+		<input type="checkbox" value="Python" name="topic">Python<br>
+	</p>
+
+	<p>
+		Provide any additional comments you have: <br>
+		<textarea name="comments" id="cmt" cols="40" rows="5"></textarea>
+	</p>
+
+	<p>
+		<input type="submit" value="Go" name="submit" id="button1">
+		<input type="submit" value="Reset" name="reset" id="button2">
+	</p>
+</form>
+
+  </body>
+</html>

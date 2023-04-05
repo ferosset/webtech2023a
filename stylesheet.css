@@ -1,0 +1,9 @@
+body {background-color: lightgrey;}
+h1 {font-family: Arial, Helvetica, sans-serif; color: navy; text-align: center;}
+table {width: 20%; 
+    color: black;
+    text-align: center;
+    margin-right: 0px;
+    border: 2px solid black;
+    border-color: black;}
+td {border: 1px solid black;}

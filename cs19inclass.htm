@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+    div.container{padding: 100px 0px; background-color: green;}
+    h1#m{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: yellow; position: absolute; top: 60px;}
+	</style>
+	
+	<script>
+	var p = 1200;
+    function moveText();
+    {
+        var myh1 = document.getElementById("m");
+        myh1.style.left = p + "px";
+        p -= 5;
+        if (p < 200)
+        {
+            p = 1200;
+        }
+        setTimeout("moveText()", 20);
+    }
+
+	</script>
+  </head>
+
+  <body onload="moveText()">
+	<!-- Your HTML goes here -->
+    <div class="container">
+        <h1 id="m">The quiz was really hard</h1>
+    </div>
+	
+	
+  </body>
+</html>

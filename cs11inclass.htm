@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title></title>
+        
+        <style>
+            p{font-family:Arial; color:green;}
+            img{margin:auto;display:block;}
+        </style>
+        
+        
+        <script type="text/javascript">
+                function change2Red()
+                {document.getElementById("a").innerHTML = "Text is now red"
+                document.getElementById("a").style.color = "red";}
+
+                function change2Black()
+                {document.getElementById("a").style.color = "black";}
+
+                function changeText()
+                {document.getElementById("a").innerHTML = "This is the new text that will replace the old"
+                document.getElementById("a").style.color = "purple";}
+                
+                function changeMe()
+                {document.getElementById("b").style.color = "purple";
+                }
+                function changeMe2()
+                {document.getElementById("b").style.color = "olive"}
+
+                function addBorder()
+                {document.getElementbyId("c").style.borderWidth = "5px";
+                document.getElementbyId("c").style.borderStyle = "ridge";
+                document.getElementById("c").style.borderColor = "red";
+                }
+                function removeBorder()
+                {document.getElementbyId("c").style.borderWidth = "0";
+                document.getElementbyId("c").style.borderStyle = "0";
+                document.getElementById("c").style.borderColor = "0";
+                }
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h4>Problem 1 - Use buttons to Change Me.</h4>
+        <h3 id="a">Change this line to a red color font. Then change it back to a black font</h3>
+        <button onclick="change2Red()">Change to Red</button> &nbsp;&NonBreakingSpace;
+        <button onclick="changeText()">Change to a new Text</button>
+        <hr/>
+
+
+
+
+        <h4 onclick="changeMe()" ondblclick="changeMe2()">Problem 2 - Click on me to change to purple and double click to change back</h4>
+        <!-- When you click on it, change the paragraph to sans-serif font, navy color, 
+        and align it to the right of the page. When you double click on it, change it back
+        to arial font, green color and center it on the web page. -->
+        <p id="b">JavaScript is a client scripting language which is used 
+           for creating web pages. It is a standalone language developed in Netscape. 
+           It is used when a webpage is to be made dynamic and add special effects 
+           on pages like rollover, roll out and many types of graphics.
+        </p>
+        <hr/>
+
+
+        <h3>Problem 3 - Mouseover the image to add a border and make the border disappear on mouseout</h3>
+        <img id="c" onmouseover="addBorder()" onmouseout="removeBorder()" src="planes.jpg" alt="Image of Planes" title="Fly High" width="400"/>
+        <hr/>
+
+    
+    </body>
+</html>

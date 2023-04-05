@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carousel Example</title>
+    <style>
+      /* Slider container */
+      .slider {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+      }
+      
+      /* Slider wrapper */
+      .slider-wrapper {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      /* Slide */
+      .slide {
+        width: 100%;
+        height: 500px;
+      }
+      
+      /* Image */
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      /* Navigation buttons */
+      .prev-btn, .next-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        color: #000000;
+        cursor: pointer;
+      }
+      .prev-btn {
+        left: 0;
+      }
+      .next-btn {
+        right: 0;
+      }
+      
+      /* Indicator bullets */
+      .indicator {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #cccccc;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      .indicator.active {
+        background-color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slider-wrapper">
+        <div class="slide">
+          <img src="m3t1.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+          <img src="m3t2.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+          <img src="m3t3.jpg" alt="Image 3">
+        </div>
+      </div>
+      <button class="prev-btn">&#10094;</button>
+      <button class="next-btn">&#10095;</button>
+      <div class="indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+      </div>
+    </div>
+    <script>
+      // Set initial slide index and reference to slider wrapper
+      let slideIndex = 0;
+      const sliderWrapper = document.querySelector(".slider-wrapper");
+      
+      // Function to update slide position and active indicator
+      function updateSlide() {
+        // Calculate slide position and update slider wrapper transform
+        const slidePosition = -slideIndex * 100;
+        sliderWrapper.style.transform = `translateX(${slidePosition}%)`;
+        
+        // Update active indicator
+        const indicators = document.querySelectorAll(".indicator");
+        indicators.forEach((indicator, index) => {
+          if (index === slideIndex) {
+            indicator.classList.add("active");
+          } else {
+            indicator.classList.remove("active");
+          }
+        });
+      }
+      
+      // Function to move to previous slide
+      function prevSlide() {
+        slideIndex--;
+        if (slideIndex < 0) {
+          slideIndex = 2;
+        }
+        updateSlide();
+      }
+      
+      // Function to move to next slide
+      function nextSlide() {
+        slideIndex++;
+        if (slideIndex > 2) {
+          slideIndex = 0;

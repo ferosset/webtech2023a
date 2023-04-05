@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<link rel="stylesheet" href="tpstylesheet.css" type="text/css">
+
+	<title>Contact</title>
+
+	<style>
+	/* Your styles go here */
+	</style>
+	
+	<script>
+    /*Code for when submitting the form it says "Thank you for your message*/
+	function submit()
+	{var s;
+		s = "Thank you for your message!";
+        alert(s);
+	}  
+	</script>
+
+  </head>
+
+  <body>
+	<!--Navbar--> 
+	<div class="header">
+		<h1 id="heading">FELIPE ON CARS</h1>
+	</div>
+	<div class="navbar">
+		<a href="index.htm">Home</a>
+		<a href="reviews.htm">Reviews</a>
+		<a href="news.htm">News</a>
+		<a href="mynextcar.htm">Cars for Sale</a>
+		<a href="contact.htm">Contact</a>
+		<a href="credits.htm">Credits</a>
+		<a href="map.htm">Site Map</a>
+	</div>
+	<!--Navbar-->
+<hr>	
+	
+<h2>Contact Me</h2>
+
+<form onclick="sumbit()" action="" method="post">
+
+	<p id="form">
+		First Name: <input type="text" name="frame" size="20" maxlength="25" placeholder="">
+		Last name: <input type="text" name="frame" size="20" maxlength="25" placeholder="">
+	</p>
+
+	<p id="form">
+		Age: <input type="text" name="frame" size="2" maxlength="2" placeholder="">
+	</p>
+
+	<p id="form">
+		Where are you reaching me from? <select name="state">
+			<option value="NULL">Please select a Continent</option>
+			<option value="MA">North America</option>
+			<option value="FL">South America</option>
+			<option value="TX">Europe</option>
+			<option value="CA">Africa</option>
+			<option value="NY">Asia</option>
+			<option value="RI">Oceania</option>
+		</select>
+	</p>
+
+	<p id="form">
+		Select your contact reason:<br>
+		<p id="formb">
+		<input type="checkbox" value="Content" name="topic" id="formb"/>Content<br>
+		<input type="checkbox" value="Media submission" name="topic" id="formb">Media submission<br>
+		<input type="checkbox" value="Car review" name="topic" id="formb">Car Review<br>
+		<input type="checkbox" value="Other" name="topic" id="formb">Other<br>
+		</p>
+	</p>
+
+	<p id="form">
+		Provide any additional comments you have: <br><br>
+		<textarea name="comments" id="cmt" cols="40" rows="5"></textarea>
+	</p>
+
+	<p id="formbut">
+		<input type="submit" value="Submit" name="submit" id="button1">
+		<input type="submit" value="Reset" name="reset" id="button2">
+	</p>
+</form>
+
+<hr>
+<br>
+<br>
+  </body>
+</html>
