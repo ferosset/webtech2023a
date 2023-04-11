@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Q4.htm</title>
+        <style type="text/css">
+            h1 {
+                text-align: center;
+            }
+            form {
+                font-family: Arial;
+                
+                margin-left:300px; margin-right:300px;
+                padding-left:100px;
+            }
+            table {
+                width: 80%; border:1px solid black;
+            }
+            td {
+                width: 35%;
+            }
+            p {
+                width: 80%;
+                font-family: Arial;
+                color:Navy;
+                font-size: 16pt;
+                margin-left:300px; 
+            }
+            select,button, input {
+                font-size: 12pt;
+            }
+        
+        
+        
+        </style>
+        <script type="text/javascript">
+            
+        function doMath()
+    {
+                event.preventDefault();
+
+                var myf = document.getElementById("t");
+                var prod
+                var quant
+                var price
+                var prod = prod.product.value
+                var quant = quant.quantity.value
+
+                /*Alerts*/
+                if (prod == "Select")
+                {
+                    alert ("Please Select a Product")
+                    myf.total.style.backgroundColor = "red"
+                }
+                
+               else if (quant == "Select")
+                {
+                    alert("Please Select the Quantity")
+                    myf.total.style.backgroundColor = "red"
+                }
+
+                /*Prompt with Willing to Pay*/
+                else
+        {
+
+                if (prod.product.value == "Pants")
+                {
+                price = prompt ("How much are you willing to pay for this item?")
+
+                if (isNaN(price) == true)
+                {
+                alert ("Enter a value for the item")
+                }
+                else
+                {
+                myf.total.value = "$ " + price * quant
+                myf.total.style.backgroundColor = ""
+                }
+             }
+        else
+        {
+                if (prod.product.value == "Shirt")
+                {
+                price = prompt ("How much are you willing to pay for this item?")
+
+                if (isNaN(price) == true)
+                {
+                alert ("Enter a value for the item")
+                }
+                else
+                {
+                myf.total.value = "$ " + price * quant
+                myf.total.style.backgroundColor = ""
+                }
+        }
+    }
+}
+}
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+
+        <h1> Tally the Total (25 points) </h1>
+        <p> This is a table with a form.<br/> 
+            There are 2 drop down menus - one for selecting the product and the other for selecting 
+            the fixed order quantity. <br/>
+            The user will select one from each list and click on compute. <br/>
+            Please ask the user the price they are willing to pay for the "shirt" or "pant" depending on what they selected (5).<br/> 
+            If shirt is selected, it must say "What are you willing to pay for the Shirt". Same for the pant as well. <br/>
+            Make sure that the price is not non-numerical (4). 
+            Please display the total (with $ signs) when the compute button is clicked (10). <br/> 
+            Please ensure that the user selects ONE valid value from each of the two drop down menus. If the 
+            first is not selected, the alert must say "Please select product". 
+            If the second is not selected, the alert must say "Please select Quantity". 
+            In both instances, the background color of the total must turn red. 
+            When the price is displayed correctly, the background must be white. (6).
+        </p>
+       <form id="t" action="" method="post">
+            <table>
+                 <tr>
+                     <td>
+                    <select id="prod" name="product">
+                        <option value="Select">Please Select a Product</option>
+                        <option value="Shirt">Shirt</option>
+                        <option value="Pant">Pant</option>
+                    </select> 
+                     </td>
+                     <td>
+                     <select id="quant" name="quantity">
+                        <option value="Select">Please Select the Quantity</option>
+                        <option value="10">10 Units</option>
+                        <option value="20">20 Units</option>
+                        <option value="30">30 Units</option>
+                    </select>
+                     </td>
+                     <td>
+                         Total: <input type="text" name="total" size="10" />
+                     </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button onclick="doMath()">Compute</button>
+                    <input type="reset" name="reset" value="Clear"/></td>
+
+                </tr>
+           </table>
+         </form>
+       
+   
+    
+    </body>
+</html>
