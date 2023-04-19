@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Quiz 7</title>
+
+	<style>
+	/* Your styles go here */
+	button {height:40px; width:60px;}
+	body {text-align:center;}
+	p{font-weight: bold;}
+	input#button2{padding: 5px; background-color: red;}
+	input#button1{padding: 5px; background-color: green;}
+	form{background-color: silver; font-family: Arial, Helvetica, sans-serif; color: navy;
+		padding-left: 7%; padding-top: 3%; padding-bottom: 3%; font-size: 80%; margin-left: auto; margin-right: auto; width: 60%;}
+	textarea{background-color: white;}
+	div#form{margin-right: 250px; margin-left: 250px; padding-top: 10px; padding-bottom: 10px;}
+	</style>
+	
+	<script type="text/javascript">
+
+	function verify()
+	{
+		event.preventDefault();
+		var myf = document.getElementById("f");
+		var myname = document.getElementById("n");
+		var myage = document.getElementById("a");
+		var mysex = document.getElementById("s");
+		var mymajor = document.getElementById("m");
+
+		if (isNaN (document.getElementById("f")) && ""){
+		alert("Write you name on the form, not a numerical value");
+		}
+		else if (isNaN (document.getElementById("a")) && ""){
+		alert("What is your age?");
+		}
+		else if (document.getElementById("s") == "Null"){
+		alert("What is your sex?");
+		}
+		else if (document.getElementById("m") == "" || isNaN (document.getElementById("m"))){
+		alert("What is your major?");
+		}
+		else
+			{
+				mystudent = myname + myage + mysex + mymajor.value;
+			}
+		myf.results.value = mystudent;
+	}
+	</script>
+  </head>
+
+  <body>
+	<h1> Building a form</h1>
+	<!-- Construct a form that has the following fields: (1) Text box for you name. (2) Text box for your age.
+	(3) A drop down menu for your sex (4) a text box for your major and (5) a text area. Make
+	sure you add the submit and clear buttons to the form.  Format the form so that it looks good, 
+	centered on the page, with a silver background, arial font, with each element held with paragraphs. (10).
+
+	Once you are done, validate the form for the following: (1) Name should not be blank and it should not be
+	numeric. (2) The age must be a non numerical value and must not be blank. (3) Sex must be selected. (4) The
+	major can be one of ITM, MKT, FIN, ECON, or BA. You do not have to worry about case senstive typing here.
+	Display the data as "Hello Shankar, you are 32 year old male majoring in ITM". Substitute the appropriate
+	values in the above sentence. -->
+
+<div id="form">
+	<form id="f">
+	<p id="form">
+		Name: <input id="n" type="text" name="frame" size="20" maxlength="25" placeholder="">
+	</p>
+
+	<p id="form">
+		Age: <input id="a" type="text" name="frame" size="2" maxlength="2" placeholder="">
+	</p>
+
+	<p id="form">
+		Sex: <select id="s" name="sex">
+			<option id="null" value="Null"></option>
+			<option id="male" value="Male">Male</option>
+			<option id="female" value="Female">Female</option>
+			<option id="other" value="Other">Other</option>
+		</select>
+	</p>
+
+	<p id="form">
+		Major: <textarea id="m" name="comments" id="cmt" cols="20" rows="1"></textarea>
+	</p>
+
+	<p id="results">
+		<textarea id="results" name="comments" id="cmt" cols="20" rows="5"></textarea>
+	</p>
+
+	<p id="formbut">
+		<input onclick="verify()" type="submit" value="Submit" name="submit" id="button1">
+		<input type="reset" value="Clear" name="clear" id="button2">
+	</p>
+
+</form>
+</div>
+
+  </body>
+</html>

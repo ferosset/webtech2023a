@@ -40,13 +40,13 @@
         var dollars = document.getElementsByName("d").value;
         var yuan = document.getElementsByName("y").value;
 
-        if ((dollars === "" || yuan === "")) {
+        if ((dollars === "" && yuan === "")) {
             alert("Please enter a value to convert either Dollars or Yuan");
         } 
-        else if ((dollars !== "" || yuan !== "")) {
+        else if ((dollars !== "" && yuan !== "")) {
             alert("Please enter a value in only one of the fields");
         } 
-        else if (isNaN(dollars) || isNaN(yuan)) {
+        else if (isNaN(dollars) && isNaN(yuan)) {
             alert("Please enter valid numeric values in the fields");
         } 
         else {
