@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<link rel="stylesheet" href="tpstylesheet.css" type="text/css">
+
+	<title>Reviews</title>
+
+	<style>
+	/* Your styles go here */
+	</style>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(function(){
+
+      $("p#h11").click (function(){
+      
+      $("p#p1").slideToggle();
+        if ($(this).html() == "More Reviews (+)")
+        {
+          $(this).html ("More Reviews (+)");
+        }
+        else
+        {
+          $(this).html ("More Reviews (+)");
+        }
+        
+      });
+
+    });  
+	</script>
+
+<script type="text/javascript">
+
+	var imgs2show = new Array ("tdf2.jpeg", "ts1.jpeg", "m2c7.jpeg", "rs4.jpeg", "5002.jpg");
+	var c = 0;
+	var ctr = 0;
+	var runflag = 0;
+	var mycontrol;
+
+	function showSlides()
+	{
+		var myimg = document.getElementById("a");
+		myimg.src = imgs2show[c];
+		runflag = 1;
+		++c;
+	
+	if (c > imgs2show.length - 1)
+	{
+		c = 0;
+	}
+	mycontrol = setTimeout("showSlides()",2000);
+	}
+	
+	function stopIt()
+	{
+		if (runflag == 1)
+		{
+			runflag = 0;
+			clearTimeout(mycontrol);
+		}
+
+		else{
+
+			mycontrol = setTimeout("showSlides()",1000);
+		}
+	}
+	</script>
+
+  </head>
+
+  <body>
+	<!--Navbar--> 
+	<div class="header">
+		<h1 id="heading">FELIPE ON CARS</h1>
+	</div>
+	<div class="navbar">
+		<a href="index.htm">Home</a>
+		<div class="dropdown">
+		  <button class="dropbtn" href="reviews.htm">Reviews 
+		  </button>
+		  <div class="dropdown-content">
+			<a href="reviews.htm">RATINGS</a>
+			<a href="f12tdf.htm">Ferrari F12 TDF</a>
+			<a href="911ts.htm">Porsche 911 Turbo S</a>
+			<a href="m2c.htm">BMW M2 Competition</a>
+			<a href="focusrs.htm">Ford Focus RS</a>
+			<a href="vwgti.htm">VW Golf GTI</a>
+			<a href="fiat500.htm">Fiat 500L</a>
+		  </div>
+		</div> 
+		  <a href="news.htm">News</a>
+		<a href="mynextcar.htm">Cars for Sale</a>
+		<a href="contact.htm">Contact</a>
+		<a href="credits.htm">Credits</a>
+		<a href="map.htm">Site Map</a>
+	  </div>
+	<!--Navbar-->
+<hr>
+
+<h2 id="welcome">Ratings</h2>
+			<p id="rev">
+				Here are the ratings for the cars I have reviewed. Click on the name to read the article: 
+			</p>
+
+			<p id="h11" style="margin-left: 340px; margin-right: 300px; font-style: italic;">More Reviews (+)</p>
+			<p id="p1" style="margin-left: 340px; margin-right: 300px;">
+			This is a relatively new website, and as I have more time and opportunity to experience and drive more cars, they will be added and 
+			ranked on this list. For the time being, post your news and feedback on the <a href="contact.htm" style="text-decoration: none;">contact</a> page.
+			</p>
+
+	<table>
+        <tr id="table">
+            <td class="c1" class="c1t">Year</td>
+            <td class="c1">Car Name</td>
+            <td class="c2">Styling</td>
+			<td class="c2">Acceleration</td>
+			<td class="c2">Handling</td>
+			<td class="c2">Quality</td>
+			<td class="c2">Value</td>
+			<td class="c3">Total</td>
+        </tr>
+		<tr id="tablebody">
+            <td class="c1"><a href="911ts.htm">2022</a></td>
+            <td class="c1"><a href="911ts.htm">Porsche 911 Turbo S</a></td>
+            <td class="c2"><a href="911ts.htm">8</a></td>
+			<td class="c2"><a href="911ts.htm">10</a></td>
+			<td class="c2"><a href="911ts.htm">9</a></td>
+			<td class="c2"><a href="911ts.htm">9</a></td>
+			<td class="c2"><a href="911ts.htm">7</a></td>
+			<td class="c3">43</td>
+        </tr>
+		<tr id="tablebody">
+            <td class="c1"><a href="f12tdf.htm" id="c1">2018</a></td>
+            <td class="c1"><a href="f12tdf.htm">Ferrari F12 TDF</a></td>
+            <td class="c2"><a href="f12tdf.htm">9</a></td>
+			<td class="c2"><a href="f12tdf.htm">9</a></td>
+			<td class="c2"><a href="f12tdf.htm">9</a></td>
+			<td class="c2"><a href="f12tdf.htm">9</a></td>
+			<td class="c2"><a href="f12tdf.htm">6</a></td>
+			<td class="c3">42</td>
+        </tr>
+		<tr id="tablebody">
+            <td class="c1"><a href="m2c.htm">2021</a></td>
+            <td class="c1"><a href="m2c.htm">BMW M2 Competition</a></td>
+            <td class="c2"><a href="m2c.htm">7</a></td>
+			<td class="c2"><a href="m2c.htm">7</a></td>
+			<td class="c2"><a href="m2c.htm">8</a></td>
+			<td class="c2"><a href="m2c.htm">8</a></td>
+			<td class="c2"><a href="m2c.htm">9</a></td>
+			<td class="c3">39</td>
+        </tr>
+		<tr id="tablebody">
+            <td class="c1"><a href="focusrs.htm">2017</a></td>
+            <td class="c1"><a href="focusrs.htm">Ford Focus RS</a></td>
+            <td class="c2"><a href="focusrs.htm">6</a></td>
+			<td class="c2"><a href="focusrs.htm">7</a></td>
+			<td class="c2"><a href="focusrs.htm">7</a></td>
+			<td class="c2"><a href="focusrs.htm">7</a></td>
+			<td class="c2"><a href="focusrs.htm">8</a></td>
+			<td class="c3">35</td>
+        </tr>
+		<tr id="tablebody">
+            <td class="c1"><a href="vwgti.htm">2016</a></td>
+            <td class="c1"><a href="vwgti.htm">VW Golf GTI</a></td>
+            <td class="c2"><a href="vwgti.htm">6</a></td>
+			<td class="c2"><a href="vwgti.htm">5</a></td>
+			<td class="c2"><a href="vwgti.htm">6</a></td>
+			<td class="c2"><a href="vwgti.htm">8</a></td>
+			<td class="c2"><a href="vwgti.htm">9</a></td>
+			<td class="c3">34</td>
+        </tr>
+    </table>
+<br>
+
+<body onload="showSlides()">
+<img id="a" src="5001.jpg" alt="Slide Show of Tigers" title="Tigers" width="40%" height="40%" style="margin-left: 375px;"/>
+</body>
+
+
+<hr>
+<br>
+<br>
+  </body>
+</html>

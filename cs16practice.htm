@@ -4,7 +4,7 @@
 
   <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
-	<title>Change this title</title>
+	<title>CS16 Practice</title>
 
 	<style>
 	/* Your styles go here */
@@ -19,34 +19,51 @@
 	</style>
 	
 	<script>
-     
-     function changeSize()
-     {
-          var myimg = document.getElementById("a");
-          if (myimg.width > 400)
-          {
-               myimg.width = myimg.width/1.2;
-          }
-          else
-          {
-               myimg.width = myimg.width * 1.2
-          }
-     }
+	/* Your JavaScript goes here */
+          function bigpic()
+               {
+                   var myimg = document.getElementById('pic');
+                    if (myimg.width > 400)
+                    {
+                         myimg.width = myimg.width/1.2;
+                    }
+                    else
+                    {
+                         myimg.width = myimg.width * 1.2;
+                    }
+               }
+          
+          function changecolor(mycolor)
+               {
+                    var mydiv = document.getElementById('swag');
 
-     function changeCol()
-     {
-          var mycol = document.getElementById("b");
-              }
+                    if (mycolor == "b")
+                    {
+                         mydiv.style.backgroundColor = "lightBlue";
+                    }
+                    else if (mycolor == "g")
+                    {
+                         mydiv.style.backgroundColor = "lightGreen";
+                    }
+                    else if (mycolor == "m")
+                    {
+                         mydiv.style.backgroundColor = "magenta";
+                    }
+                    else
+                    {
+                         mydiv.style.backgroundColor = "lightPink";
+                    }
+               }
 
-     function changeTitle(shankar)
-     {
-          document.getElementById("c").innerHTML = document.getElementById(shankar);
+          function changetitle(benis)
+               {
+                    document.getElementById('c').innerHTML = document.getElementById(benis);
 
-          if (shankar == "one")
-          {
-               document.getElementById("c") == "Web Tech is Great"
-          }
-     }
+                    if (benis == '1')
+                    {
+                         document.getElementByid('c') == "webtech is lit";
+                    }
+               }
 	</script>
   </head>
 
@@ -58,7 +75,7 @@
 	<!-- When you click on the image increase its width by 20% - 
 	     and when you click again, return it to original size -->
 	
-		<img id="a" onclick="changeSize()" src="AlaskaLakeR.jpg" alt="Alaska Lake" title="Click Me" width="400"/> 
+		<img id="pic" onclick="bigpic()" src="AlaskaLakeR.jpg" alt="Alaska Lake" title="Click Me" width="400"/> 
 
     <hr/>
     <h2> Problem 2</h2>
@@ -68,12 +85,12 @@
          Please change the color of the div depending on which
          button is clicked.-->
 
-         <div>
+         <div id="swag" >
 
-            <button id="b" onclick="changeCol()">LightBlue</button>
-            <button id="b" onclick="changeCol()">LightGreen</button>
-            <button id="b" onclick="changeCol()">Magenta</button>
-            <button id="b" onclick="changeCol()">LightPink</button>
+            <button id="b" onclick="changecolor(this.id)">LightBlue</button>
+            <button id="g" onclick="changecolor(this.id)">LightGreen</button>
+            <button id="m" onclick="changecolor(this.id)">Magenta</button>
+            <button id="p" onclick="changecolor(this.id)">LightPink</button>
 
          </div>
 
@@ -85,11 +102,11 @@
          change the title in the h1 tag to the corresponding
          text. -->
 
-         <h1> This is the title that should change. </h1>
+         <h1 id="c"> This is the title that should change. </h1>
 
-         <h3>Web Tech is Great</h3>
-         <h3>Web Tech Sucks</h3>
-         <h3>Web Tech is Bearable</h3>
+         <h3 id="1" onclick="changetitle(this.id)"> Web Tech is Great </h3>
+         <h3 id="2" onclick="changetitle(this.id)"> Web Tech Sucks </h3>
+         <h3 id="3" onclick="changetitle(this.id)"> Web Tech is Bearable </h3>
 
     <hr/>
 	

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<link rel="stylesheet" href="tpstylesheet.css" type="text/css">
+
+	<title>Contact</title>
+
+	<style>
+	/* Your styles go here */
+	</style>
+	
+	<script type="text/javascript">
+		function showMe()
+		{
+			event.preventDefault();
+                var myf = document.getElementById("dafrm");
+                var myfname, mylname, myage, mystate, mycontact;
+                myfname = myf.fname.value;
+                mylname = myf.lname.value;
+                myage = myf.age.value;
+                mystate = myf.state.value;
+                mycontact = myf.topic.value;
+				mycomment = myf.comment.value;
+
+                if (myfname.length <= 0)
+                {
+                    alert ("Enter a value for first name");
+                }
+                else if (mylname.length <= 0)
+                {
+                    alert ("Enter a value for last name");
+                }
+                else if ((myage.length <=0) || (isNaN(myage) == true))
+                {
+                    alert("Please enter a numerical value for age");
+                }
+                else if (mystate == "NULL")
+                {
+                    alert ("Please select your location")
+                }
+                else if (mycontact == "null")
+                {
+                    alert ("Please select the reason for contact")
+                }
+				else if (mycomment == "")
+                {
+                    alert ("Please write the reason for contact")
+                }
+                else
+                {
+                    alert ("Thank you for submitting the form!");
+                }
+                
+             }
+
+   </script>
+
+  </head>
+
+  <body>
+	<!--Navbar--> 
+	<div class="header">
+		<h1 id="heading">FELIPE ON CARS</h1>
+	</div>
+	<div class="navbar">
+		<a href="index.htm">Home</a>
+		<div class="dropdown">
+		  <button class="dropbtn" href="reviews.htm">Reviews 
+		  </button>
+		  <div class="dropdown-content">
+			<a href="reviews.htm">RATINGS</a>
+			<a href="f12tdf.htm">Ferrari F12 TDF</a>
+			<a href="911ts.htm">Porsche 911 Turbo S</a>
+			<a href="m2c.htm">BMW M2 Competition</a>
+			<a href="focusrs.htm">Ford Focus RS</a>
+			<a href="vwgti.htm">VW Golf GTI</a>
+			<a href="fiat500.htm">Fiat 500L</a>
+		  </div>
+		</div> 
+		  <a href="news.htm">News</a>
+		<a href="mynextcar.htm">Cars for Sale</a>
+		<a href="contact.htm">Contact</a>
+		<a href="credits.htm">Credits</a>
+		<a href="map.htm">Site Map</a>
+	  </div>
+	<!--Navbar-->
+<hr>	
+	
+<h2>Contact Me</h2>
+
+<form id="dafrm" action="" method="post">
+
+	<p id="form">
+		First Name: <input type="text" name="fname" size="20" maxlength="25" placeholder="">
+		Last name: <input type="text" name="lname" size="20" maxlength="25" placeholder="">
+	</p>
+
+	<p id="form">
+		Age: <input type="text" name="age" size="2" maxlength="2" placeholder="">
+	</p>
+
+	<p id="form">
+		Where are you reaching me from? <select name="state">
+			<option value="NULL">Please select a Continent</option>
+			<option value="MA">North America</option>
+			<option value="FL">South America</option>
+			<option value="TX">Europe</option>
+			<option value="CA">Africa</option>
+			<option value="NY">Asia</option>
+			<option value="RI">Oceania</option>
+		</select>
+	</p>
+
+	<p id="form">
+		Select your contact reason:<br>
+		<p id="formb">
+		<input type="checkbox" value="Content" name="topic" id="formb"/>Content<br>
+		<input type="checkbox" value="Media submission" name="topic" id="formb">Media submission<br>
+		<input type="checkbox" value="Car review" name="topic" id="formb">Car Review<br>
+		<input type="checkbox" value="Other" name="topic" id="formb">Other<br>
+		</p>
+	</p>
+
+	<p id="form">
+		Provide any additional comments you have: <br><br>
+		<textarea name="comments" id="cmt" cols="40" rows="5"></textarea>
+	</p>
+
+	<p id="formbut">
+		<input onclick="showMe()" type="submit" value="Submit" name="submit" id="button1">
+		<input type="submit" value="Reset" name="reset" id="button2">
+	</p>
+</form>
+
+<hr>
+<br>
+<br>
+  </body>
+</html>
